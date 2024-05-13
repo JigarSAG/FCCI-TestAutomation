@@ -1,0 +1,325 @@
+{
+	"info": {
+		"_postman_id": "c4a22db8-f6a7-4b12-8ffe-16e4e0c1b550",
+		"name": "FCCI - Error FWK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Error Logging - Request Validation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status Code is 400\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "PDVService",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "MzdZPZ2LTxptYY#g111f23874nksdf5%gsdbf",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-correlation-id",
+						"value": "TEST_Error_00000016",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Jigar\",\r\n    \"lastName\": \"Shah\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fccipdv.int-aws-us.webmethods.io/integration/restv2/development/fl0eeead976cdc6e46ddd3f4/testAudit_svc/testFailure",
+					"protocol": "https",
+					"host": [
+						"fccipdv",
+						"int-aws-us",
+						"webmethods",
+						"io"
+					],
+					"path": [
+						"integration",
+						"restv2",
+						"development",
+						"fl0eeead976cdc6e46ddd3f4",
+						"testAudit_svc",
+						"testFailure"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Error Logging - Technical Error",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status Code is 500\", function(){\r",
+							"    pm.response.to.have.status(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "PDVService",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "MzdZPZ2LTxptYY#g111f23874nksdf5%gsdbf",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-correlation-id",
+						"value": "TEST_Error_00000014",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fccipdv.int-aws-us.webmethods.io/integration/restv2/development/fl0eeead976cdc6e46ddd3f4/testAudit_svc/testFailure",
+					"protocol": "https",
+					"host": [
+						"fccipdv",
+						"int-aws-us",
+						"webmethods",
+						"io"
+					],
+					"path": [
+						"integration",
+						"restv2",
+						"development",
+						"fl0eeead976cdc6e46ddd3f4",
+						"testAudit_svc",
+						"testFailure"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Error Logging - Http Error",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status Code is 500\", function(){\r",
+							"    pm.response.to.have.status(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "PDVService",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "MzdZPZ2LTxptYY#g111f23874nksdf5%gsdbf",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-correlation-id",
+						"value": "TEST_Error_00000020",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Jigar\",\r\n    \"lastName\": \"Shaha\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fccipdv.int-aws-us.webmethods.io/integration/restv2/development/fl0eeead976cdc6e46ddd3f4/testAudit_svc/testFailure",
+					"protocol": "https",
+					"host": [
+						"fccipdv",
+						"int-aws-us",
+						"webmethods",
+						"io"
+					],
+					"path": [
+						"integration",
+						"restv2",
+						"development",
+						"fl0eeead976cdc6e46ddd3f4",
+						"testAudit_svc",
+						"testFailure"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Success",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status Code is 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "PDVService",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "MzdZPZ2LTxptYY#g111f23874nksdf5%gsdbf",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-correlation-id",
+						"value": "TEST_Success_00000003",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Jigar\",\r\n    \"lastName\": \"Shaha\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fccipdv.int-aws-us.webmethods.io/integration/restv2/development/fl0eeead976cdc6e46ddd3f4/testAudit_svc/testSuccess",
+					"protocol": "https",
+					"host": [
+						"fccipdv",
+						"int-aws-us",
+						"webmethods",
+						"io"
+					],
+					"path": [
+						"integration",
+						"restv2",
+						"development",
+						"fl0eeead976cdc6e46ddd3f4",
+						"testAudit_svc",
+						"testSuccess"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
